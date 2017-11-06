@@ -1,0 +1,3 @@
+class TreeUser < ApplicationRecord
+
+end

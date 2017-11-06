@@ -1,0 +1,3 @@
+class RegionUser < ApplicationRecord
+
+end

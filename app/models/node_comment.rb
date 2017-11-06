@@ -1,0 +1,3 @@
+class NodeComment < ApplicationRecord
+
+end

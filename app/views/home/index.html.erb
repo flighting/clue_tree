@@ -1,2 +1,14 @@
-<h1>You opened this site</h1>
-<p>Upcoming</p>
+<% @regions.each do |region|%>
+  <div class="ui segment">
+    <p><%= region.title %></p>
+    <div class="ui celled ordered list">
+      <% region.nodes.last(5).each do |node| %>
+      <div class="item"><%= node.title %> [<%=node.creator.name%> <%= node.created_at.to_date %>]</div>
+      <%end%>
+    </div>
+    <table class="ui striped table">
+      
+    </table>
+  </div>
+
+<%end%>

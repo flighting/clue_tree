@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ClueTree</title>
+    <title>Hlbf</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="ui fixed menu">
+      <div class="ui container">
+        <%= render 'shared/menu', cached: true %>
+      </div>
+    </div>
+
+    <div class="ui main text container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+
+    <div class="ui vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui section divider"></div>
+        <div class="ui horizontal small divided link list">
+          <a class="item" href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+
+

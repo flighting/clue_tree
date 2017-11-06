@@ -1,0 +1,3 @@
+class SiteConfig < ApplicationRecord
+
+end

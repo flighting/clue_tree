@@ -58,3 +58,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'pg'
+gem 'jquery-rails'
+gem 'rails_admin', '~> 1.2'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-semantic', '~> 2.1.7'
+end

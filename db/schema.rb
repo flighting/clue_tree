@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171106031308) do
+ActiveRecord::Schema.define(version: 20171106080343) do
 
   create_table "node_comments", force: :cascade do |t|
     t.integer "node_id"
@@ -84,7 +84,6 @@ ActiveRecord::Schema.define(version: 20171106031308) do
     t.string "account"
     t.string "email"
     t.string "name"
-    t.string "password"
     t.integer "group", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

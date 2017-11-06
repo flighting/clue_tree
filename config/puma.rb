@@ -1,9 +1,14 @@
-app_root = '/data/www/clue_tree'
-pidfile "#{app_root}/shared/tmp/pids/puma.pid"
-state_path "#{app_root}/shared/tmp/pids/puma.state"
-stdout_redirect "#{app_root}/shared/log/puma.stdout.log", "#{app_root}/shared/log/puma.stderr.log", true
-bind 'unix:/tmp/clue_tree.puma.sock'
-daemonize true
+
+if ENV.fetch("RAILS_ENV") == 'production'
+  app_root = '/data/www/clue_tree'
+  pidfile "#{app_root}/shared/tmp/pids/puma.pid"
+  state_path "#{app_root}/shared/tmp/pids/puma.state"
+  stdout_redirect "#{app_root}/shared/log/puma.stdout.log", "#{app_root}/shared/log/puma.stderr.log", true
+  bind 'unix:/tmp/clue_tree.puma.sock'
+  daemonize true
+else
+  daemonize false
+end
 
 
 
@@ -22,7 +27,7 @@ port        ENV.fetch("PORT") { 3001 }
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "production" }
+environment ENV.fetch("RAILS_ENV") { "development" }
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
