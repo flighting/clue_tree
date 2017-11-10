@@ -63,3 +63,7 @@ gem 'rails_admin', '~> 1.2'
 source 'https://rails-assets.org' do
   gem 'rails-assets-semantic', '~> 2.1.7'
 end
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
+gem 'ckeditor'
+gem 'simple_form'

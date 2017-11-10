@@ -1,0 +1,11 @@
+<tr>
+  <td><%= node.region&.title%></td>
+  <td><%= link_to node.title, [:admin, node] %></td>
+  <td><%= node.creator&.name%></td>
+  <td><%= node.created_at.to_date%></td>
+  <td>
+    <%= link_to edit_admin_node_path(node), class: 'ui mini compact button', remote: true do %>
+      <i class="icon edit"></i>
+    <%end%>
+  </td>
+</tr>

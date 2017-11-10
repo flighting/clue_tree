@@ -1,0 +1,26 @@
+<div class="ui grid">
+  <div class="left floated fourteen wide column">
+    <h3>Nodes</h3>
+  </div>
+</div>
+<div class="ui segment">
+  
+  <div class="right">
+    <%= link_to 'new', new_admin_node_path, class: 'ui button mini' %>
+  </div>
+  <table class="ui selectable compact celled table">
+    <thead>
+      <tr>
+        <th class="center aligned two wide">分类</th>
+        <th class="center aligned">标题</th>
+        <th class="center aligned one wide">发布者</th>
+        <th class="center aligned one wide">日期</th>
+        <th class="center aligned one wide">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render :partial => "node", :collection => @nodes, :as => :node %>
+    </tbody>
+  </table>
+  <%= paginate(@nodes)%>
+</div>

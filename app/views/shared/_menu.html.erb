@@ -22,3 +22,7 @@
   </div>
 </div>
 <a href="#" class="item">About</a>
+<% if !current_user.present? %>
+  <a href="<%= new_user_session_path %>" class="item">Sign In</a>
+<%end%>
+

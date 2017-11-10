@@ -24,3 +24,8 @@ user_id
 tree_id
 node_id   # node 为空，表示对整个tree的权限， 有node表示对这个node的权限
 access_type
+
+
+# 前台：首页，分类列表，内容页, About
+# 后台: node列表页，添加，编辑，删除
+#       user 列表页，查看，编辑
