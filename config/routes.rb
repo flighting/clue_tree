@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   get 'home/index'
+  resources :nodes
   
   root to: "home#index"
 
